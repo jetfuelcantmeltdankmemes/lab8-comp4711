@@ -8,11 +8,14 @@ class Admin extends Application {
     public function index(){
         $origin = $_SERVER['HTTP_REFERER'];
         $role = $this->session->userdata('userrole');
-        if ($role == 'user') {
+        if ($role != 'admin') {
             $this->data['content'] = 'Access Denied';
-        } else {
-            $this->data['content'] = 'Welcome to the Admin Control Panel';
-        };
+            $this->render();
+            return;
+        }
+
+        $this->data['pagebody' ] ='mtce';
+        $this->data['items'] = $this->menu->all();
         $this->render();
     }
 }
