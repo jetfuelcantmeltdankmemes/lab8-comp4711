@@ -18,8 +18,9 @@ class Application extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-
-		//  Set basic view parameters
+                $this->load->helper('formfields');
+		
+                //  Set basic view parameters
 		$this->data = array();
 		$this->data['pagetitle'] = "Jim's Joint";
 		$this->data['ci_version'] = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '';
