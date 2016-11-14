@@ -6,7 +6,7 @@
         </tr>
         {items}
         <tr>
-                <td><a class="btn btn-default" role="button" href="/toggle/edit/{id}">{id}</a></td>
+                <td><a class="btn btn-default" role="button" href="/admin/edit/{id}">{id}</a></td>
                 <td>{name}</td>
                 <td>{description}</td>
         </tr>
