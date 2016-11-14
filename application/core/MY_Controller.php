@@ -18,8 +18,7 @@ class Application extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-                $this->load->helper('formfields');
-		
+                
                 //  Set basic view parameters
 		$this->data = array();
 		$this->data['pagetitle'] = "Jim's Joint";
